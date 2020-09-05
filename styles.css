@@ -96,7 +96,6 @@ body {
     height: 38px;
     background-color: white;
     border-radius: 30px;
-    cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -114,6 +113,7 @@ body {
     background-size: 10px;
     width: 50%;
     height: 100%;
+    cursor: pointer;
 }
 
 @media (min-width: 768px) {
