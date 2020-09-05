@@ -1,0 +1,220 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+    font-size: 32px;
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+@media (min-width: 768px) {
+    .slider {
+        transition-duration: 0.7s;
+    }
+}
+
+.slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 30px 20px 80px 20px;
+    background-image: url("images/pattern-curve.svg");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 65% 10%;
+}
+
+@media (min-width: 768px) {
+    .slide {
+        flex-direction: row-reverse;
+        padding: 50px 20px 100px 20px;
+        background-size: 40% 20%;
+    }
+}
+
+.slide .image {
+    background-image: url("images/pattern-bg.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .slide .image {
+        flex-basis: 55%;
+        height: 650px;
+    }
+}
+
+.slide .image .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    max-width: 535px;
+}
+
+.slide .image img {
+    width: 245px;
+    border-radius: 5px;
+    box-shadow: -5px 45px 80px -60px hsl(240, 38%, 20%);
+}
+
+@media (min-width: 768px) {
+    .slide .image img {
+        width: 100%;
+        max-width: 535px;
+        box-shadow: -10px 45px 80px -60px hsl(240, 38%, 20%);
+    }
+}
+
+.slide .arrows {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    display: flex;
+    justify-content: center;
+    width: 80px;
+    height: 38px;
+    background-color: white;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .slide .arrows {
+        left: 21%;
+        width: 22%;
+        height: 11%;
+    }
+}
+
+.slide .arrows .prev, 
+.slide .arrows .next {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10px;
+    width: 50%;
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+    .slide .arrows .prev, 
+    .slide .arrows .next {
+        background-size: unset;
+    }
+}
+
+.slide .arrows .prev {
+    background-image: url("images/icon-prev.svg");
+}
+
+.slide .arrows .next {
+    background-image: url("images/icon-next.svg");
+}
+
+.slide .description {
+    background-image: url("images/pattern-quotes.svg");
+    background-repeat: no-repeat;
+    background-size: 63px;
+    background-position-x: center;
+    margin-top: 20px;
+    padding-top: 18px;
+    color: hsl(240, 38%, 20%);
+}
+
+@media (min-width: 768px) {
+    .slide .description {
+        flex-basis: 45%;
+        transform: translateX(132px);
+        background-size: 130px;
+        background-position-x: 19%;
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 900px) {
+    .slide .description {
+        margin-top: 20px;
+        padding-top: 4.5%;
+    }
+}
+
+.slide .description p {
+    margin-top: 10px;
+    font-size: 19px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 25px;
+}
+
+@media (min-width: 768px) {
+    .slide .description p {
+        text-align: left;
+        line-height: 30px;
+    }
+}
+
+@media (min-width: 900px) {
+    .slide .description p {
+        font-size: 22px;
+        line-height: 35px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .slide .description p {
+        font-size: 32px;
+        line-height: 45px;
+    }
+}
+
+.slide .author span {
+    display: block;
+    font-size: 16px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .slide .author span {
+        display: inline;
+        text-align: left;
+    }
+}
+
+@media (min-width: 900px) {
+    .slide .author span {
+        font-size: 18px;
+    }
+}
+
+.slide .author .name {
+    font-weight: 700;
+}
+
+.slide .author .job {
+    font-weight: 500;
+    color: hsl(240, 18%, 77%);
+}
+
+
+.attribution { font-size: 11px; text-align: center; margin-top: 10px;}
+.attribution a { color: hsl(228, 45%, 44%); }
